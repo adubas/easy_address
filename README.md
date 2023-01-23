@@ -24,6 +24,7 @@ Initial setup configuration trough docker-compose run
 $ docker-compose build
 $ docker-compose run --rm --service-ports app bash
 $ bin/setup
+$ rails db:migrate
 $ rails s -b 0.0.0.0
 ```
 
@@ -37,6 +38,7 @@ $ rails s -b 0.0.0.0
 - [Faker](https://github.com/faker-ruby/faker)
 - [Factory Bot](https://github.com/thoughtbot/factory_bot)
 - [RuboCop](https://github.com/rubocop/rubocop)
+- [WebMock](https://github.com/bblimke/webmock)
 
 ## Testing
 
@@ -44,5 +46,7 @@ Run the following
 
 ```bash
 $ docker-compose run --rm --service-ports app bash
+$ bin/setup
+$ rails db:migrate
 $ rspec
 ```

@@ -1,0 +1,45 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  TargetRubyVersion: 3.2.0
+
+Layout/BlockLength:
+ Exclude:
+   - 'spec/**/*'
+
+Layout/HashSyntax:
+ Exclude:
+   - 'spec/**/*'
+
+Layout/LineLength:
+  Max: 120
+
+Layout/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/Documentation:
+  Enabled: false
+
+Layout/GuardClause:
+  Enabled: true
+
+Layout/MethodCallWithoutArgsParentheses:
+  Enabled: false
+
+Layout/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Layout/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Layout/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Layout/TernaryParentheses:
+  EnforcedStyle: require_no_parentheses
+
+Naming/MethodName:
+  Allow snake_case: true
+
+Metrics/MethodLength:
+  Max: 15
